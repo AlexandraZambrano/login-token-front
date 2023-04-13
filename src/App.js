@@ -13,12 +13,9 @@ function App() {
   return (
     <div className="App">
     <AuthProvider>
-      {/* <UserSearch /> */}
       <Login />
       <Register />
-      {/* <UserSearchBar /> */}
-      {/* <UserSearch />
-      <UserView /> */}
+      <UserSearchBar />
       <UsersList />
     </AuthProvider>
 

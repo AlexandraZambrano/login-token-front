@@ -10,9 +10,9 @@ function UsersList() {
     const token = localStorage.getItem("auth_token");
     const userRole = localStorage.getItem("auth_role");
 
-    console.log(token)
+    // console.log(token)
 
-    if(userRole == 'ROLE_ADMIN'){
+    if(userRole == ['ROLE_ADMIN', 'ROLE_USER']){
         // useEffect(() => {
         try{
 

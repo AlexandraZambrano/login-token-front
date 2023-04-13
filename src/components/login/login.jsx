@@ -27,9 +27,9 @@ function Login() {
             const userToken = { accessToken: accessToken}
 
             const decodedToken = jwtDecode(accessToken)
-            console.log(decodedToken)
+            // console.log(decodedToken)
             const userRole = decodedToken.roles
-            // console.log(uroles)
+            console.log(userRole)
 
             const storedUsername = window.localStorage.setItem(
                 'loggedAppUser', JSON.stringify(user)
@@ -43,8 +43,8 @@ function Login() {
                 'auth_role', userRole
             )
 
-            console.log(storedToken)
-            console.log(storedUsername)
+            // console.log(storedToken)
+            // console.log(storedUsername)
 
 
             if (userRole == 'ROLE_USER') {
