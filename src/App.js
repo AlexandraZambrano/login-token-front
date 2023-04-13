@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Login from './components/login/login';
+import Register from './components/registro/register';
+import UsersList from './components/dashboard/usersList';
+import UserSearch from './components/searchBar/SearchBar';
+import UserSearchBar from './components/searchBar/SearchBar';
+import UserView from './components/UserView/UserView';
+import AuthProvider from './context/AuthProvider';;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AuthProvider>
+      {/* <UserSearch /> */}
+      <Login />
+      <Register />
+      {/* <UserSearchBar /> */}
+      {/* <UserSearch />
+      <UserView /> */}
+      <UsersList />
+    </AuthProvider>
+
     </div>
   );
 }
